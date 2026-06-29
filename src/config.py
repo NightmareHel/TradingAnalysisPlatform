@@ -42,11 +42,19 @@ def save_config(config: dict):
         yaml.dump(config, f, default_flow_style=False, sort_keys=False)
 
 
+_ENV_MAP = {
+    "anthropic": "LLM_API_KEY",
+    "fred": "FRED_API_KEY",
+    "finnhub": "FINNHUB_API_KEY",
+    "fmp": "FMP_API_KEY",
+}
+
+
 def get_api_key(service: str) -> str:
     config = load_config()
     key = config.get("api_keys", {}).get(service, "")
-    if not key and service == "anthropic":
-        key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not key:
+        key = os.environ.get(_ENV_MAP.get(service, ""), "")
     return key
 
 
@@ -56,9 +64,7 @@ def detect_llm_provider(key: str) -> str:
 
 
 def has_required_keys() -> bool:
-    config = load_config()
-    keys = config.get("api_keys", {})
-    return bool(keys.get("anthropic"))
+    return bool(get_api_key("anthropic"))
 
 
 def test_groq_connection(api_key: str) -> tuple[bool, str]:

@@ -99,3 +99,7 @@ echo ""
 (sleep 4 && open "http://localhost:8501") &
 
 streamlit run app.py --server.headless true
+
+echo ""
+echo "  App has stopped."
+read -p "  Press Enter to close..."
