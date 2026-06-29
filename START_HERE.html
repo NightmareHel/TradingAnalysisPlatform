@@ -165,19 +165,27 @@
   <div class="step">
     <div class="step-num">2</div>
     <div class="step-content">
-      <strong>Open <code>run.command</code> for the first time</strong>
-      <p>macOS will block the file on the first launch. To open it:</p>
+      <strong>Unlock the downloaded files (one time only)</strong>
+      <p>macOS blocks files downloaded from the internet. To unlock them:</p>
       <ul style="margin-top: 8px;">
-        <li><strong>Right-click</strong> <code>run.command</code></li>
-        <li>Click <strong>Open</strong> from the menu</li>
-        <li>Click <strong>Open</strong> again in the security dialog</li>
+        <li>Open <strong>Terminal</strong> (press <strong>Cmd + Space</strong>, type <code>Terminal</code>, press Enter)</li>
+        <li>Type <code>xattr -cr </code> (with a space at the end), then <strong>drag the project folder</strong> from Finder into the Terminal window</li>
+        <li>Press <strong>Enter</strong></li>
       </ul>
-      <p style="margin-top: 8px;">A Terminal window will open and set everything up automatically. This takes about 30-60 seconds.</p>
+      <p style="margin-top: 8px;">This removes the security block from all files. You only need to do this once.</p>
     </div>
   </div>
 
   <div class="step">
     <div class="step-num">3</div>
+    <div class="step-content">
+      <strong>Double-click <code>run.command</code></strong>
+      <p>A Terminal window will open and set everything up automatically. This takes about 30-60 seconds on first launch. Your browser will open when it's ready.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
     <div class="step-content">
       <strong>Enter your API keys</strong>
       <p>Your browser will open automatically. Click <strong>Settings</strong> in the left sidebar and paste your 4 API keys. Then click <strong>Save API Keys</strong>.</p>
@@ -185,7 +193,7 @@
   </div>
 
   <div class="tip">
-    After the first time, you can just <strong>double-click</strong> <code>run.command</code> normally — no right-click needed.
+    After the first time, just <strong>double-click</strong> <code>run.command</code> to start the app. No Terminal commands needed again.
   </div>
 
   <hr class="divider">
