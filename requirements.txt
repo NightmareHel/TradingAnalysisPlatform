@@ -1,0 +1,16 @@
+streamlit>=1.38.0
+anthropic>=0.40.0
+yfinance>=0.2.40
+yahooquery>=2.3.7
+fredapi>=0.5.2
+edgartools>=3.0.0
+ta>=0.11.0
+pandas>=2.1.0
+numpy>=1.26.0
+plotly>=5.18.0
+requests>=2.31.0
+pyyaml>=6.0
+fpdf2>=2.7.9
+matplotlib>=3.8.0
+Pillow>=10.0.0
+pytz>=2024.1

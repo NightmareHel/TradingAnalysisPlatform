@@ -1,0 +1,12 @@
+venv/
+/data/
+config.yaml
+keys.txt
+__pycache__/
+*.pyc
+.DS_Store
+*.egg-info/
+dist/
+build/
+handoff.md
+planning.md
